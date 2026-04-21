@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doggy Run</title>
+    <style>
+        body { margin: 0; background: #90EE90; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; }
+        canvas { display: block; max-width: 100%; max-height: 100vh; touch-action: none; }
+        #loading { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 24px; color: #333; }
+    </style>
+</head>
+<body>
+    <div id="loading">游戏加载中...</div>
+
+    <script>
+        // 模拟抖音小游戏API，让游戏能在浏览器运行
+        if (typeof tt === 'undefined') {
+            window.tt = {
+                getSystemInfoSync: function() {
+                    return {
+                        windowWidth: window.innerWidth,
+                        windowHeight: window.innerHeight,
+                        pixelRatio: window.devicePixelRatio || 1
+                    };
+                },
+                createCanvas: function() {
+                    return document.createElement('canvas');
+                },
+                onTouchStart: function(callback) {
+                    document.addEventListener('touchstart', callback);
+                    document.addEventListener('mousedown', function(e) {
+                        callback({ touches: [{ clientX: e.clientX, clientY: e.clientY }] });
+                    });
+                },
+                createRewardedVideoAd: function() {
+                    return { 
+                        onLoad: function(){},
+                        onError: function(){},
+                        show: function(){
+                            alert('广告功能仅在抖音/TikTok版本生效');
+                        }
+                    };
+                }
+            };
+        }
+    </script>
+
+    <script src="game.js"></script>
+
+    <script>
+        // 监听加载状态
+        window.addEventListener('load', () => {
+            document.getElementById('loading').innerText = '游戏加载完成！';
+            setTimeout(() => {
+                document.getElementById('loading').style.display = 'none';
+            }, 500);
+        });
+    </script>
+</body>
+</html>

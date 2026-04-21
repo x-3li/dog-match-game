@@ -1,0 +1,49 @@
+{
+    "appid": "ttb0a2c61f2ec48f7f02",
+    "projectname": "DOG-MATCH",
+    "compileType": "miniprogram",
+    "libVersion": "2.19.4",
+    "projectSetting": {
+      "urlCheck": false,
+      "es6": true,
+      "enhance": true,
+      "postcss": true,
+      "preloadBackgroundData": false,
+      "minified": true,
+      "newFeature": false,
+      "coverView": true,
+      "nodeModules": false,
+      "autoAudits": false,
+      "showShadowRootInWxmlPanel": true,
+      "scopeDataCheck": false,
+      "uglifyFileName": false,
+      "checkInvalidKey": true,
+      "checkSiteMap": true,
+      "uploadWithSourceMap": true,
+      "compileHotReLoad": false,
+      "lazyloadPlaceholderEnable": false,
+      "useMultiFrameRuntime": true,
+      "useApiHook": true,
+      "useApiHostProcess": true,
+      "babelSetting": {
+        "ignore": [],
+        "disablePlugins": [],
+        "outputPath": ""
+      },
+      "enableEngineNative": false,
+      "useIsolateContext": true,
+      "userConfirmedBundleSwitch": false,
+      "packNpmManually": false,
+      "packNpmRelationList": [],
+      "miniprogramRoot": "./",
+      "packOptions": {
+        "ignore": [],
+        "include": []
+      }
+    },
+    "condition": {},
+    "editorSetting": {
+      "tabIndent": "insertSpaces",
+      "tabSize": 2
+    }
+  }
